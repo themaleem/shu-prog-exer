@@ -1,1 +1,3 @@
-## Sheffield Hallam University Intro to programming Class Weeks Exercises
+## Sheffield Hallam University Intro to programming Class
+
+## Weeks Exercises
