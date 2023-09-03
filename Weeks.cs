@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace Exercises
 {
@@ -134,6 +135,7 @@ namespace Exercises
       System.Console.WriteLine($"The current time right now is {DateTime.Now.ToString()}");
     }
   }
+
   internal class Week3
   {
     public static void Exercise1()
@@ -282,5 +284,381 @@ namespace Exercises
 
     }
   }
+
+
+  internal class Week6
+  {
+    public static Dictionary<string, int> GetClassNumbers()
+    {
+      Dictionary<string, int> classNumbers;
+      classNumbers = new Dictionary<string, int>();
+      classNumbers.Add("csharp", 90);
+      classNumbers.Add("java", 120);
+      classNumbers.Add("python", 208);
+      classNumbers.Add("php", 72);
+
+      // Print(classNumbers);
+      return classNumbers;
+    }
+
+    public static void Print(Dictionary<string, int> dict)
+    {
+      foreach (var kvp in dict)
+      {
+        Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+      }
+    }
+
+    public static void Print2(Dictionary<string, int> dict)
+    {
+      for (int i = 0; i < dict.Count; i++)
+      {
+        System.Console.WriteLine($"{dict.ElementAt(i).Key}: {dict.ElementAt(i).Value}");
+      }
+    }
+
+    // public  static
+
+    public static void GetCsharpStudents()
+    {
+      Dictionary<string, int> dict = GetClassNumbers();
+      System.Console.WriteLine(dict["c#"]);
+    }
+
+    public static void SetJavaStudents(Dictionary<string, int> dict)
+    {
+
+      dict["java"] = 130;
+      System.Console.WriteLine(dict["java"]);
+      Print2(dict);
+    }
+
+    // Exercise5
+    public static Dictionary<int, string> PeriodicTable()
+    {
+      Dictionary<int, string> dict = new Dictionary<int, string>
+      {
+            { 4, "Be" },
+            { 2, "He" },
+            { 2, "B" },
+            { 2, "Li" },
+            { 2, "H" }
+        };
+
+      return dict;
+    }
+
+    public static void OutputData(Dictionary<int, string> dict)
+    {
+
+    }
+
+
+  }
+
+  internal class Test
+  {
+    public static void Some()
+    {
+
+      var rec = new { name = "olumide", age = 13 };
+      // Console.WriteLine(rec.age);
+
+      IDictionary<int, string> courses = new Dictionary<int, string>()
+      {
+        {1,"Computing, ITM,AI"},
+        {2,"MBA, Robotics, ITM"},
+      };
+
+      bool test = false;
+      int i = 0;
+      while (test == false)
+      {
+        Console.WriteLine(i);
+        i = i + 1;
+        test = true;
+      }
+
+    }
+
+    public static int max(int a, int b)
+    {
+      if (a > b)
+        return a;
+      return b;
+    }
+    public static void MaxVal()
+    {
+      int[] numbers = { 3, 5, 21, 0, 450, 43, 2, 54, 1 };
+      int maxi = numbers[0];
+      foreach (var number in numbers)
+      {
+        maxi = max(maxi, number);
+      }
+      System.Console.WriteLine(maxi);
+    }
+
+
+
+    public static void something()
+    {
+      string var1 = "Hello I am learning programming";
+      System.Console.WriteLine(var1.IndexOf('I'));
+
+      // int speed = 25;
+      // System.Console.WriteLine("The car was" + "Travelling at the speed of " + speed + " MPH");
+
+      // int age;
+      // age = 25;
+      // age++;
+      // age += 1;
+
+      // age--;
+      // age -= 1;
+
+      // // in two years, age will be age + 2
+      // age += 2; // 27
+
+      // age -= 2; // 25
+      // // System.Console.WriteLine(age);
+
+      // double age2 = Convert.ToDouble(age);
+
+      // age2 /= 2; // 12 not 12.5
+
+      // age *= 2; // 24
+      // System.Console.WriteLine(age);
+
+
+      // 25.0 / 2; // 12.5
+
+
+      // true false
+
+      //       true and true  true
+      //       true and false false
+      //       false and false false
+      //       false and true  false
+
+      //       true or true  true
+      //       true or false true
+      //       false or false false
+      //       false or true  true
+
+
+      //       1 + 2 + 3 + 4
+      // 3 + 3 + 4
+      // 6 + 4
+
+
+      // (false and true) or (true or false ) and ( false or false) and (true and true)
+      // (false or true) and (false  and  true)
+      // true and false
+      // false
+
+
+      // false or true or false ^ true or false and true and true
+      // true or false ^ true or false and true and true
+      // true ^ true or false and true and true
+      // true or  false and true and true
+      // true and true and true
+      // true and true
+      // true
+
+      // false or true or false and false or false and true and true
+      // true or false and false or false and true and true
+      // true and false or false and true and true
+      // false or false and true and true
+      // false and  true and true
+      // false and true
+      // false
+
+      // either peace and chidinma to be available before we hold a meeting
+
+      // if chidinma and peace
+      //   hold the meeting
+      // else if chidinma or peace
+      //   hold the meeting
+      // else
+      //   no meeting
+
+      // always go to school monday to friday but not on weekends 
+      // while the day is monday to friday
+      //   go to school
+      // day is saturday
+      // don't go to school
+      //  break
+
+
+
+      // int count = 2;
+      // int total = 10;
+      // while (count < total)
+      // {
+      //   Console.WriteLine("Count " + count);
+      //   count++;
+
+      //   System.Console.WriteLine("Count is now " + count);
+      //   if (count == 7)
+      //     break;
+      // }
+
+      // do
+      // {
+      //   Console.WriteLine("Count " + count); // Count 2
+      //   count++; // count = count + 1 =  3
+      // }
+      // while (count < total);
+
+      // string name = "Chidinma";
+
+      // for (int val = 0; val < name.Length; val = val + 2)
+      // {
+      //   System.Console.WriteLine(name[val]);
+      // }
+
+      // foreach (var character in name)
+      // {
+      //   System.Console.WriteLine(character);
+      // }
+
+      // string[] DayOfWeek;
+      // DayOfWeek = new string[7];
+      // DayOfWeek[0] = "Mon";
+      // DayOfWeek[1] = "Tue";
+      // DayOfWeek[2] = "Wec";
+      // DayOfWeek[3] = "Thur";
+      // DayOfWeek[4] = "Fri";
+      // DayOfWeek[5] = "Sat";
+      // DayOfWeek[6] = "Mon";
+
+
+
+      // string[] daysOfWeek = { "Mon", "Tues", "Wed", "Thur", "Fri", "Sat", "Sun" };
+
+
+      // int item = Convert.ToInt32(Console.ReadLine());
+
+      // switch (item)
+      // {
+      //   case 1:
+      //     Console.WriteLine("case 1");
+      //     break;
+
+      //   case 5:
+      //     Console.WriteLine("case 5");
+      //     break;
+
+      //   case 9:
+      //     Console.WriteLine("case 9");
+      //     break;
+
+      //   default:
+      //     Console.WriteLine("No match found");
+      //     break;
+      // }
+
+
+
+
+    }
+
+
+    public static bool compare()
+    {
+      // Write a method that takes two numbers as input and returns true or false if the two numbers are equal.
+
+      Console.WriteLine("Input two numbers ");
+
+      Console.Write("Input first number: ");
+      int number1;
+      number1 = Convert.ToInt32(Console.ReadLine());
+
+      Console.Write("Input second number: ");
+      int number2;
+      number2 = Convert.ToInt32(Console.ReadLine());
+      return number1 == number2;
+    }
+
+    public static void login()
+    {
+      // Write a method that takes userid and password as input (type string). After 3 wrong attempts, user will be
+      // rejected. Method must print appropriate message for success and for running out of tries.
+      // Hint: You need an if statement that checks the two inputs against set values (For example userId = “mo”,
+      // password = “secret” – the inputs are compared to “mo”, and “secret”). Also, you need to have a counter to
+      // record number of attempts. You need a while loop to make sure up to 3 attempts are allowed.
+
+      for (int counter = 0; counter < 3; counter++)
+      {
+        Console.Write("userid: ");
+        string userid = Console.ReadLine();
+
+        Console.Write("password: ");
+        string password = Console.ReadLine();
+
+        if (userid == "mo" && password == "secret")
+        {
+          System.Console.WriteLine("Login is successful");
+          break;
+        }
+        else
+        {
+          System.Console.WriteLine("Login is unsuccessful");
+        }
+      }
+    }
+
+    public static void arrs()
+    {
+      // string[] nums = new string[4];
+      // nums[0] = "zero";
+      // nums[1] = "one";
+      // nums[2] = "two";
+
+      // string[] nums = new string[4] { "one", "two", "three", "four" };
+      string[] nums = new string[] { "one", "two", "three", "four" };
+      string[] nums2 = { "one", "two", "three", "four" };
+
+      // multi-dimensional
+      int[,,,,] m_nums = { { { { { 1, 2, 3 }, { 1, 2, 4 } } } } };
+      System.Console.WriteLine(m_nums[0, 1, 2, 3, 4]);
+
+    }
+
+    public static void arr()
+    {
+      // int i = 30 % 4;
+      // int j = 25 % 25;
+      // if (i == j ^ j > i)
+      // {
+      //   System.Console.WriteLine("in 1st if");
+      // }
+      // if (i != j ^ j < i)
+      // {
+      //   System.Console.WriteLine("in 2nd if");
+      // }
+      // if (2 != 0 || 0 > 2)
+      // {
+      //   System.Console.WriteLine("in 3rd if");
+      // }
+      // if (i == j && j < i)
+      // {
+      //   System.Console.WriteLine("in 4th if");
+      // }
+
+
+
+    }
+
+    public static void some()
+    {
+      BigInteger bigInt = new BigInteger(3.00006);
+      // display(k);
+    }
+
+
+  }
+
+
 }
 

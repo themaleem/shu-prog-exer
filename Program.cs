@@ -12,7 +12,7 @@
 // int[] myArrayOfInt = new int[] { 1, 2, 3 };
 // Week5.PrintArrayOfInt(myArrayOfInt);
 
-// Week5.Swap(5, 6);
+//Week5.Swap(5, 6);
 
 // int a = 5, b = 6;
 // Week5.SwapInt(ref a, ref b);
@@ -21,4 +21,14 @@
 // Week5.SwapStr(ref a, ref b);
 
 
-Week5.SwapNamesInArray();
+//Week5.SwapNamesInArray();
+// Week6.GetClassNumbers();
+//Week6.SetJavaStudents(Week6.GetClassNumbers());
+//Week6.GetClassNumbers();
+// Week6.GetClassNumbers();
+
+
+// Exercises.Test.Some();
+// Exercises.Test.something();
+// Exercises.Test.login();
+Exercises.Test.display();
